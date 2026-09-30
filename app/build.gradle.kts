@@ -46,20 +46,39 @@ android {
 }
 
 dependencies {
+    // ==========================================
+    // 1. AndroidX Core & UI 기본 구성 요소
+    // ==========================================
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.constraintlayout)
+    implementation(libs.androidx.splashscreen)
+
+    // ==========================================
+    // 2. Lifecycle & Navigation (아키텍처)
+    // ==========================================
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.navigation.fragment.ktx)
     implementation(libs.navigation.ui.ktx)
-    implementation(libs.androidx.splashscreen)
-    implementation(libs.android.pdf.viewer)
-    implementation(libs.coil.compose)
-    implementation(libs.photoview)
+
+    // ==========================================
+    // 3. 네트워크 통신 (Network)
+    // ==========================================
     implementation(libs.retrofit)
     implementation(libs.retrofit.converter.gson)
     implementation(libs.okhttp)
     implementation(libs.okhttp.logging.interceptor)
+
+    // ==========================================
+    // 4. 이미지 처리 & 뷰어 (Media & Visual)
+    // ==========================================
+    implementation(libs.coil)
+    implementation(libs.photoview)
+
+    // ==========================================
+    // 5. 문서 뷰어 (Document)
+    // ==========================================
+    implementation(libs.android.pdf.viewer)
 }
